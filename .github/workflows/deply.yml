@@ -22,7 +22,7 @@ jobs:
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USERNAME }}
-          key: ${{ secrets.OVH_SSH_PRIVATE_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             docker pull ghcr.io/user/hello-world-ghcr:latest
             docker run -d -p 8080:80 ghcr.io/user/hello-world-ghcr:latest
